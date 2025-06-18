@@ -23,4 +23,3 @@ jobs:
           git commit -m "generated"
           git push
           
-![](./profile-3d-contrib/profile-night-rainbow.svg)
