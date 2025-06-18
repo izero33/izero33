@@ -32,6 +32,8 @@ jobs:
         env:
            GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           USERNAME: ${{ github.repository_owner }}
+          THEME: github
+
       - name: Commit & Push
         run: |
           git config user.name izero33
