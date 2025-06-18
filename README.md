@@ -40,4 +40,4 @@ jobs:
           git commit -m "generated"
           git push
 
-![](./profile-3d-contrib/profile-green-animate.svg)
+![](./profile-3d-contrib/profile-gitblock.svg)
