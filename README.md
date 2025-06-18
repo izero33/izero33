@@ -39,3 +39,5 @@ jobs:
           git add -A .
           git commit -m "generated"
           git push
+
+          ![](./profile-3d-contrib/profile-gitblock.svg)
