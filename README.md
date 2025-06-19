@@ -18,8 +18,8 @@ Here are some ideas to get you started:
 name: GitHub-Profile-3D-Contrib
 
 on:
-  schedule: # 03:00 JST == 18:00 UTC
-    - cron: "0 18 * * *"
+  schedule: # 00:00 KST == 15:00 UTC
+    - cron: "0 15 * * *"
   workflow_dispatch:
 
 jobs:
@@ -30,9 +30,15 @@ jobs:
       - uses: actions/checkout@v3
       - uses: yoshi389111/github-profile-3d-contrib@0.7.1
         env:
-           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           USERNAME: ${{ github.repository_owner }}
-          THEME: github
+      - name: Commit & Push
+        run: |
+          git config user.name github-actions
+          git config user.email github-actions@github.com
+          git add -A .
+          git commit -m "update - 3D 그래프 업데이트"
+          git push
 
       - name: Commit & Push
         run: |
